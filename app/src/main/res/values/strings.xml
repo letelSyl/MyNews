@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">MyNews</string>
+
+    <array name="titlesPagesViewPager">
+        <item>TOP STORIES</item>
+        <item>MOST POPULAR</item>
+        <item>BUSINESS</item>
+
+    </array>
+
+</resources>
+
+
