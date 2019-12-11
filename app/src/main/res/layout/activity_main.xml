@@ -9,7 +9,7 @@
 
     <!-- Toolbar Importation -->
     <include
-        android:id="@+id/include"
+        android:id="@+id/main_include"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
 
@@ -26,7 +26,7 @@
         app:tabIndicatorColor="@color/colorAccent"
         app:tabTextColor="#ffffff"
         app:tabSelectedTextColor="#ffffff"
-        app:layout_constraintTop_toBottomOf="@+id/include"/>
+        app:layout_constraintTop_toBottomOf="@+id/main_include"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/activity_main_viewpager"

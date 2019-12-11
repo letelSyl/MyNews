@@ -13,19 +13,21 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
+import butterknife.ButterKnife;
+import butterknife.Bind;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*regarder butterknife
-    *      api:retrofit + rxjava  */
-    private Toolbar toolbar;
-    private ViewPager pager;
-    private TabLayout tabs;
+    @Bind(R.id.main_include) Toolbar toolbar;
+    @Bind(R.id.activity_main_viewpager) ViewPager pager;
+    @Bind(R.id.tabs) TabLayout tabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
 
         //3 - Configure toolbar
         this.configureToolbar();
@@ -36,10 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configureToolbar(){
-        //1 - Get the toolbar view inside the activity layout
-        this.toolbar = findViewById(R.id.include);
-        //2 - Set the toolbar
-
+        // Set the toolbar
         setSupportActionBar(toolbar);
 
     }
@@ -80,17 +79,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configureViewPagerAndTabs(){
-        //Get ViewPager from layout
-        this.pager = (ViewPager)findViewById(R.id.activity_main_viewpager);
         //Set Adapter PageAdapter and glue it together
         pager.setAdapter(new PageAdapter(getSupportFragmentManager(),
                 getResources().getStringArray(R.array.titlesPagesViewPager)));
 
-        // 1 - Get TabLayout from layout
-        this.tabs= findViewById(R.id.tabs);
-        // 2 - Glue TabLayout and ViewPager together
+        //  Glue TabLayout and ViewPager together
         tabs.setupWithViewPager(pager);
-        // 3 - Design purpose. Tabs have the same width
+        // Design purpose. Tabs have the same width
         tabs.setTabMode(TabLayout.MODE_FIXED);
     }
 }

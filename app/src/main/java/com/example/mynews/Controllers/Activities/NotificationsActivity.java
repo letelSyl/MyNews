@@ -3,6 +3,8 @@ package com.example.mynews.Controllers.Activities;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 import android.os.Bundle;
 
@@ -10,7 +12,8 @@ import com.example.mynews.R;
 
 public class NotificationsActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
+
+    @Bind(R.id.notifications_Include) Toolbar toolbar;
 
 
     @Override
@@ -18,13 +21,13 @@ public class NotificationsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
 
+        ButterKnife.bind(this);
+
         //1 - Configuring Toolbar
         this.configureToolbar();
     }
 
     private void configureToolbar(){
-        //Get the toolbar (Serialise)
-        this.toolbar = (Toolbar) findViewById(R.id.toolbar);
         //Set the toolbar
         setSupportActionBar(toolbar);
         // Get a support ActionBar corresponding to this toolbar

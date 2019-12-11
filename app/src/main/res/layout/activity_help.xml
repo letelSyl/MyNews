@@ -7,6 +7,7 @@
 
     <!-- Toolbar Importation -->
     <include
+        android:id="@+id/help_include"
         layout="@layout/toolbar"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
