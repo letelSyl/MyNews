@@ -18,6 +18,9 @@ import butterknife.Bind;
 
 public class MainActivity extends AppCompatActivity {
 
+//    retrofit + java rx
+
+
     @Bind(R.id.main_include) Toolbar toolbar;
     @Bind(R.id.activity_main_viewpager) ViewPager pager;
     @Bind(R.id.tabs) TabLayout tabs;

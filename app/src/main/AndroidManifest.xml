@@ -12,7 +12,7 @@
 
         <activity
             android:name=".Controllers.Activities.MainActivity"
-            android:label="MyNews"
+            android:label="My News"
             android:logo="@drawable/ic_menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 public class PageAdapter extends FragmentPagerAdapter {
 
-    // 1 - Array of colors that will be passed to PageFragment
+    // 1 - Array of titles that will be passed to PageFragment
     private String[] titles;
 
     // 2 - Default Constructor

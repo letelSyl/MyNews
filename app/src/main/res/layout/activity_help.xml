@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,4 +9,150 @@
         android:id="@+id/help_include"
         layout="@layout/toolbar"
         />
+<!-- texte html dans textview -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help_include"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/help_textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Curabitur vestibulum erat at faucibus lacinia."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Aliquam mollis dolor elementum nunc pretium tristique."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text=" Ut sed mauris non dolor mattis viverra et sed velit."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Nunc aliquet libero a varius posuere."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text=" Nunc tristique felis ac convallis consequat."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Vivamus suscipit eros id eleifend dignissim."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Sed vitae ipsum laoreet, varius dolor quis, tincidunt felis."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text=" Sed laoreet dui non massa tempus, vitae pretium lorem luctus."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Curabitur vestibulum erat at faucibus lacinia."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aliquam mollis dolor elementum nunc pretium tristique."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text=" Ut sed mauris non dolor mattis viverra et sed velit."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Nunc aliquet libero a varius posuere."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text=" Nunc tristique felis ac convallis consequat."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Vivamus suscipit eros id eleifend dignissim."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="Sed vitae ipsum laoreet, varius dolor quis, tincidunt felis."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text=" Sed laoreet dui non massa tempus, vitae pretium lorem luctus."
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
