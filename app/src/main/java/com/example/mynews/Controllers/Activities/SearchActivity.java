@@ -25,6 +25,8 @@ public class SearchActivity extends AppCompatActivity {
     @Bind(R.id.tv_date_start) TextView tvDateStart;
     @Bind(R.id.tv_date_end) TextView tvDateEnd;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +39,9 @@ public class SearchActivity extends AppCompatActivity {
 
         dateSelector(tvDateStart);
         dateSelector(tvDateEnd);
-
-
-
-
     }
+
+
 
     private void configureToolbar(){
         //Set the toolbar
@@ -52,6 +52,8 @@ public class SearchActivity extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
     }
 
+
+    
     private void dateSelector(final TextView tv){
 
         Calendar calendar=Calendar.getInstance();
