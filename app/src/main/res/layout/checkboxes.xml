@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkboxes"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/search_checkBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/arts"
+            app:layout_constraintBaseline_toBaselineOf="@+id/search_checkBox2"
+            app:layout_constraintEnd_toStartOf="@+id/search_checkBox2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/search_checkBox2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/politics"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/search_checkBox"
+            tools:layout_conversion_absoluteHeight="136dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/search_checkBox3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/business"
+            app:layout_constraintBaseline_toBaselineOf="@+id/search_checkBox4"
+            app:layout_constraintEnd_toStartOf="@+id/search_checkBox4"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/search_checkBox4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sports"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/search_checkBox3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/search_checkBox5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/entrepreneurs"
+            app:layout_constraintBaseline_toBaselineOf="@+id/search_checkBox6"
+            app:layout_constraintEnd_toStartOf="@+id/search_checkBox6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/search_checkBox6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/travel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/search_checkBox5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

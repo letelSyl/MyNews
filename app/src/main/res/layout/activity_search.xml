@@ -3,39 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <!-- Toolbar Importation -->
     <include
-        android:id="@+id/search_Include"
-        layout="@layout/toolbar" />
-
-    <AutoCompleteTextView
-        android:id="@+id/search_tv"
-        style="@style/Widget.AppCompat.AutoCompleteTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:dropDownHeight="wrap_content"
-        android:hint="Search query term"
-        android:textColorHint="@android:color/darker_gray"
-        android:textCursorDrawable="@android:color/black"
+        android:id="@+id/search_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/dates"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_Include" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/dates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/search_checkBoxes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_tv">
+        app:layout_constraintTop_toBottomOf="@+id/search_toolbar">
+
+        <include
+            android:id="@+id/search_tv"
+            layout="@layout/auto_complete_text_view" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -43,11 +37,10 @@
 
             <TextView
                 android:id="@+id/tv_title_date_start"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:accessibilityLiveRegion="none"
-                android:backgroundTint="@color/colorPrimary"
-                android:hint="Begin Date"
+                android:hint="@string/begin_date"
                 android:textAlignment="viewStart"
                 android:textCursorDrawable="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -57,10 +50,9 @@
 
             <TextView
                 android:id="@+id/tv_title_date_end"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
-                android:hint="End Date"
+                android:hint="@string/end_date"
                 android:textAlignment="viewStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,12 +66,10 @@
 
             <TextView
                 android:id="@+id/tv_date_start"
-                android:layout_width="wrap_content"
+                style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:accessibilityLiveRegion="none"
-                android:backgroundTint="@color/colorPrimary"
-                android:hint="select a date"
-                android:onClick="dateSelector"
                 android:textColor="#000000"
                 android:textCursorDrawable="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -89,11 +79,9 @@
 
             <TextView
                 android:id="@+id/tv_date_end"
-                android:layout_width="wrap_content"
+                style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
-                android:hint="Select a date"
-                android:onClick="dateSelector"
                 android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -101,81 +89,27 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/search_checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorPrimary"
-                android:text="CheckBox" />
-
-            <CheckBox
-                android:id="@+id/search_checkBox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorPrimary"
-                android:text="CheckBox" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/search_checkBox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CheckBox"
-                android:buttonTint="@color/colorPrimary"/>
-
-            <CheckBox
-                android:id="@+id/search_checkBox4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CheckBox"
-                android:buttonTint="@color/colorPrimary"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/search_checkBox5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CheckBox"
-                android:buttonTint="@color/colorPrimary"/>
-
-            <CheckBox
-                android:id="@+id/search_checkBox6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CheckBox"
-                android:buttonTint="@color/colorPrimary"/>
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/search_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorPrimary"
-            android:text="SEARCH"
-            android:textAppearance="@style/Toolbar.TitleText" />
     </LinearLayout>
+
+    <include
+        android:id="@+id/search_checkBoxes"
+        layout="@layout/checkboxes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dates" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/search"
+        android:textAppearance="@style/Toolbar.TitleText"
+        app:layout_constraintTop_toBottomOf="@+id/search_checkBoxes" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

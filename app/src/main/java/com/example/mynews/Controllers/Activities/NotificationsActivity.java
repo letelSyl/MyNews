@@ -7,6 +7,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 import android.os.Bundle;
+import android.widget.AutoCompleteTextView;
 
 import com.example.mynews.R;
 
@@ -14,7 +15,7 @@ public class NotificationsActivity extends AppCompatActivity {
 
 
     @Bind(R.id.notifications_Include) Toolbar toolbar;
-
+    @Bind(R.id.notifications_tv) AutoCompleteTextView query_term;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,6 +3,7 @@ package com.example.mynews.Controllers.Activities;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
@@ -19,8 +20,8 @@ import butterknife.ButterKnife;
 public class SearchActivity extends AppCompatActivity {
 
 
-    @Bind(R.id.search_Include) Toolbar toolbar;
-
+    @Bind(R.id.search_toolbar) Toolbar toolbar;
+    @Bind(R.id.search_tv) AutoCompleteTextView query_term;
     @Bind(R.id.tv_date_start) TextView tvDateStart;
     @Bind(R.id.tv_date_end) TextView tvDateEnd;
 
