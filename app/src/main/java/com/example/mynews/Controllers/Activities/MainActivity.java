@@ -6,24 +6,27 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.mynews.R;
 import com.example.mynews.Adapters.PageAdapter;
+import com.example.mynews.R;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-import butterknife.ButterKnife;
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
 //    retrofit + java rx
 
 
-    @Bind(R.id.main_include) Toolbar toolbar;
-    @Bind(R.id.activity_main_viewpager) ViewPager pager;
-    @Bind(R.id.tabs) TabLayout tabs;
+    @Bind(R.id.main_include)
+    Toolbar toolbar;
+    @Bind(R.id.activity_main_viewpager)
+    ViewPager pager;
+    @Bind(R.id.tabs)
+    TabLayout tabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void configureToolbar(){
+    private void configureToolbar() {
         // Set the toolbar
         setSupportActionBar(toolbar);
 
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         //2 - Handle actions on menu items
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.search:
                 Intent Search = new Intent(MainActivity.this, SearchActivity.class);
                 startActivity(Search);
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void configureViewPagerAndTabs(){
+    private void configureViewPagerAndTabs() {
         //Set Adapter PageAdapter and glue it together
         pager.setAdapter(new PageAdapter(getSupportFragmentManager(),
                 getResources().getStringArray(R.array.titlesPagesViewPager)));

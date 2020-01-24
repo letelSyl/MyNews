@@ -20,13 +20,13 @@ public class PageAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return(this.titles.length); // 3 - Number of page to show
+        return (this.titles.length); // 3 - Number of page to show
     }
 
     @Override
     public Fragment getItem(int position) {
         // 4 - Page to return
-        return(PageFragment.newInstance(position, this.titles[position]));
+        return (PageFragment.newInstance(position, this.titles[position]));
     }
 
     @Override

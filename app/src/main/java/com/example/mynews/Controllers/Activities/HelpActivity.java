@@ -1,18 +1,19 @@
 package com.example.mynews.Controllers.Activities;
 
+import android.os.Bundle;
+
+import com.example.mynews.R;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-import android.os.Bundle;
-
-import com.example.mynews.R;
-
 public class HelpActivity extends AppCompatActivity {
 
-    @Bind(R.id.help_include) Toolbar toolbar;
+    @Bind(R.id.help_include)
+    Toolbar toolbar;
 
 
     @Override
@@ -26,7 +27,7 @@ public class HelpActivity extends AppCompatActivity {
         this.configureToolbar();
     }
 
-    private void configureToolbar(){
+    private void configureToolbar() {
         //Set the toolbar
         setSupportActionBar(toolbar);
         // Get a support ActionBar corresponding to this toolbar

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,7 +9,7 @@
     <include
         android:id="@+id/notifications_Include"
         layout="@layout/toolbar"
-        app:layout_constraintBottom_toTopOf="@id/linear_layout"/>
+        app:layout_constraintBottom_toTopOf="@id/linear_layout" />
 
     <LinearLayout
         android:id="@+id/linear_layout"
@@ -24,9 +23,11 @@
         <include
             android:id="@+id/notifications_tv"
             layout="@layout/auto_complete_text_view" />
+
         <include
             android:id="@+id/notifications_checkBoxes"
-            layout="@layout/checkboxes"/>
+            layout="@layout/checkboxes" />
+
         <Switch
             android:id="@+id/notifications_switch"
             android:layout_width="match_parent"
