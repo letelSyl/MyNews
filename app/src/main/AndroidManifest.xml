@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".Controllers.Activities.ArticleSearchActivity"
+            android:parentActivityName=".Controllers.Activities.SearchResultActivity" />
+        <activity
+            android:name=".Controllers.Activities.ArticleActivity"
+            android:parentActivityName=".Controllers.Activities.MainActivity" />
         <activity
             android:name=".Controllers.Activities.MainActivity"
             android:label="My News"
@@ -27,6 +32,10 @@
             android:name=".Controllers.Activities.SearchActivity"
             android:label="Search Articles"
             android:parentActivityName=".Controllers.Activities.MainActivity" />
+        <activity
+            android:name=".Controllers.Activities.SearchResultActivity"
+            android:label="Search Results"
+            android:parentActivityName=".Controllers.Activities.SearchActivity" />
         <activity
             android:name=".Controllers.Activities.NotificationsActivity"
             android:label="Notification"

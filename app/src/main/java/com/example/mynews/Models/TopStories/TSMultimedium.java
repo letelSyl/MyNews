@@ -1,9 +1,10 @@
-package com.example.mynews.Models;
+package com.example.mynews.Models.TopStories;
+
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Multimedium {
+public class TSMultimedium {
 
     @SerializedName("url")
     @Expose

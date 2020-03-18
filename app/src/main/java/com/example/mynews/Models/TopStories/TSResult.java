@@ -1,15 +1,12 @@
-package com.example.mynews.Models;
+package com.example.mynews.Models.TopStories;
+
+import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
+public class TSResult {
 
-public class Result {
-
-    @SerializedName("slug_name")
-    @Expose
-    private String slugName;
     @SerializedName("section")
     @Expose
     private String section;
@@ -25,18 +22,15 @@ public class Result {
     @SerializedName("url")
     @Expose
     private String url;
+    @SerializedName("uri")
+    @Expose
+    private String uri;
     @SerializedName("byline")
     @Expose
     private String byline;
-    @SerializedName("thumbnail_standard")
-    @Expose
-    private String thumbnailStandard;
     @SerializedName("item_type")
     @Expose
     private String itemType;
-    @SerializedName("source")
-    @Expose
-    private String source;
     @SerializedName("updated_date")
     @Expose
     private String updatedDate;
@@ -46,18 +40,12 @@ public class Result {
     @SerializedName("published_date")
     @Expose
     private String publishedDate;
-    @SerializedName("first_published_date")
-    @Expose
-    private String firstPublishedDate;
     @SerializedName("material_type_facet")
     @Expose
     private String materialTypeFacet;
     @SerializedName("kicker")
     @Expose
     private String kicker;
-    @SerializedName("subheadline")
-    @Expose
-    private String subheadline;
     @SerializedName("des_facet")
     @Expose
     private List<String> desFacet = null;
@@ -66,37 +54,26 @@ public class Result {
     private List<String> orgFacet = null;
     @SerializedName("per_facet")
     @Expose
-    private Object perFacet;
+    private List<String> perFacet = null;
     @SerializedName("geo_facet")
     @Expose
-    private List<String> geoFacet = null;
-    @SerializedName("related_urls")
-    @Expose
-    private Object relatedUrls;
+    private List<Object> geoFacet = null;
     @SerializedName("multimedia")
     @Expose
-    private List<Multimedium> multimedia = null;
-
-    public String getSlugName() {
-
-        return slugName;
-    }
-
-    public void setSlugName(String slugName) {
-        this.slugName = slugName;
-    }
+    private List<TSMultimedium> multimedia = null;
+    @SerializedName("short_url")
+    @Expose
+    private String shortUrl;
 
     public String getSection() {
         return section;
     }
 
     public void setSection(String section) {
-
         this.section = section;
     }
 
     public String getSubsection() {
-
         return subsection;
     }
 
@@ -128,6 +105,14 @@ public class Result {
         this.url = url;
     }
 
+    public String getUri() {
+        return uri;
+    }
+
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
+
     public String getByline() {
         return byline;
     }
@@ -136,28 +121,12 @@ public class Result {
         this.byline = byline;
     }
 
-    public String getThumbnailStandard() {
-        return thumbnailStandard;
-    }
-
-    public void setThumbnailStandard(String thumbnailStandard) {
-        this.thumbnailStandard = thumbnailStandard;
-    }
-
     public String getItemType() {
         return itemType;
     }
 
     public void setItemType(String itemType) {
         this.itemType = itemType;
-    }
-
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
     }
 
     public String getUpdatedDate() {
@@ -184,14 +153,6 @@ public class Result {
         this.publishedDate = publishedDate;
     }
 
-    public String getFirstPublishedDate() {
-        return firstPublishedDate;
-    }
-
-    public void setFirstPublishedDate(String firstPublishedDate) {
-        this.firstPublishedDate = firstPublishedDate;
-    }
-
     public String getMaterialTypeFacet() {
         return materialTypeFacet;
     }
@@ -206,14 +167,6 @@ public class Result {
 
     public void setKicker(String kicker) {
         this.kicker = kicker;
-    }
-
-    public String getSubheadline() {
-        return subheadline;
-    }
-
-    public void setSubheadline(String subheadline) {
-        this.subheadline = subheadline;
     }
 
     public List<String> getDesFacet() {
@@ -232,35 +185,36 @@ public class Result {
         this.orgFacet = orgFacet;
     }
 
-    public Object getPerFacet() {
+    public List<String> getPerFacet() {
         return perFacet;
     }
 
-    public void setPerFacet(Object perFacet) {
+    public void setPerFacet(List<String> perFacet) {
         this.perFacet = perFacet;
     }
 
-    public List<String> getGeoFacet() {
+    public List<Object> getGeoFacet() {
         return geoFacet;
     }
 
-    public void setGeoFacet(List<String> geoFacet) {
+    public void setGeoFacet(List<Object> geoFacet) {
         this.geoFacet = geoFacet;
     }
 
-    public Object getRelatedUrls() {
-        return relatedUrls;
-    }
-
-    public void setRelatedUrls(Object relatedUrls) {
-        this.relatedUrls = relatedUrls;
-    }
-
-    public List<Multimedium> getMultimedia() {
+    public List<TSMultimedium> getMultimedia() {
         return multimedia;
     }
 
-    public void setMultimedia(List<Multimedium> multimedia) {
+    public void setMultimedia(List<TSMultimedium> multimedia) {
         this.multimedia = multimedia;
     }
+
+    public String getShortUrl() {
+        return shortUrl;
+    }
+
+    public void setShortUrl(String shortUrl) {
+        this.shortUrl = shortUrl;
+    }
+
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -39,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:accessibilityLiveRegion="none"
                 android:hint="@string/begin_date"
+                android:layout_marginLeft="8dp"
                 android:textAlignment="viewStart"
                 android:textCursorDrawable="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -51,43 +53,76 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/end_date"
+                android:layout_marginLeft="8dp"
                 android:textAlignment="viewStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_title_date_start"
                 app:layout_constraintTop_toTopOf="parent" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_date_start"
-                style="@android:style/Widget.DeviceDefault.Light.Spinner"
+            <LinearLayout
+                android:id="@+id/tv_date_start_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:accessibilityLiveRegion="none"
-                android:textColor="#000000"
-                android:textCursorDrawable="@android:color/black"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tv_date_end"
+                app:layout_constraintEnd_toStartOf="@+id/tv_date_end_layout"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tv_date_end"
-                style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                <TextView
+                    android:id="@+id/tv_date_start"
+                    style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:accessibilityLiveRegion="none"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tv_date_start_underline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/underlineColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_date_end_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tv_date_start"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/tv_date_start_layout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_date_end"
+                    style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_date_end_underline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/underlineColor" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <include
             android:id="@+id/search_checkBoxes"

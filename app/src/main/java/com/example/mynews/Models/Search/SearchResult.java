@@ -1,24 +1,18 @@
-package com.example.mynews.Models;
+package com.example.mynews.Models.Search;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class TimeWire {
-
+public class SearchResult {
     @SerializedName("status")
     @Expose
     private String status;
     @SerializedName("copyright")
     @Expose
     private String copyright;
-    @SerializedName("num_results")
+    @SerializedName("response")
     @Expose
-    private Integer numResults;
-    @SerializedName("results")
-    @Expose
-    private List<Result> results = null;
+    private Response response;
 
     public String getStatus() {
         return status;
@@ -36,20 +30,11 @@ public class TimeWire {
         this.copyright = copyright;
     }
 
-    public Integer getNumResults() {
-        return numResults;
+    public Response getResponse() {
+        return response;
     }
 
-    public void setNumResults(Integer numResults) {
-        this.numResults = numResults;
+    public void setResponse(Response response) {
+        this.response = response;
     }
-
-    public List<Result> getResults() {
-        return results;
-    }
-
-    public void setResults(List<Result> results) {
-        this.results = results;
-    }
-
 }
