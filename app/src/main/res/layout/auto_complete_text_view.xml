@@ -11,4 +11,5 @@
     android:singleLine="false"
     android:textColorHint="@android:color/darker_gray"
     android:textColorLink="@color/colorPrimary"
-    android:textCursorDrawable="@android:color/black" />
+    android:textCursorDrawable="@android:color/black"
+    android:paddingTop="32dp" />

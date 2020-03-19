@@ -7,11 +7,9 @@ import android.widget.Toast;
 
 import com.example.mynews.Adapters.SearchAdapter;
 import com.example.mynews.Models.Search.Doc;
-import com.example.mynews.Models.Search.Response;
 import com.example.mynews.Models.Search.SearchResult;
 import com.example.mynews.R;
 import com.example.mynews.Utils.NytStreams;
-import com.example.mynews.Utils.RetrofitBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +25,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
-import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 import static com.example.mynews.Utils.RetrofitBuilder.logging;
@@ -144,7 +141,6 @@ public class SearchResultActivity extends AppCompatActivity {
 
 
         this.disposable = NytStreams.streamFetchSearch(
-               // queryTerm,startDate, endDate, categList, apiKey
                 map
         )
                 .subscribeWith(new DisposableObserver<SearchResult>() {
@@ -154,7 +150,6 @@ public class SearchResultActivity extends AppCompatActivity {
             @Override
             public void onNext(SearchResult response) {
                     Log.e("TAG", "On Next");
-                Log.println(Log.INFO,"response size :", String.valueOf(response.getResponse().getDocs().size()));
                 // 1.3 - Update UI with list of topStories
                 updateUIWithSearch(response.getResponse().getDocs());
 

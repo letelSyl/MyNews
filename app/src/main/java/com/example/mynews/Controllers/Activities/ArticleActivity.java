@@ -1,17 +1,19 @@
 package com.example.mynews.Controllers.Activities;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import com.example.mynews.R;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-
-import com.example.mynews.R;
 
 public class ArticleActivity extends AppCompatActivity {
 
@@ -48,5 +50,13 @@ public class ArticleActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

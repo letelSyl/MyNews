@@ -7,11 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mynews.Controllers.Activities.ArticleActivity;
-import com.example.mynews.Controllers.Activities.ArticleSearchActivity;
-import com.example.mynews.Models.MostPopular.MPResult;
 import com.example.mynews.Models.Search.Doc;
 import com.example.mynews.R;
-import com.example.mynews.Views.MostPopularViewHolder;
 import com.example.mynews.Views.SearchViewHolder;
 
 import java.util.List;
@@ -55,7 +52,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
             @Override
             public void onClick(View v) {
 
-                Intent articleView = new Intent(context, ArticleSearchActivity.class);
+                Intent articleView = new Intent(context, ArticleActivity.class);
 
                 articleView.putExtra("url", result.getWebUrl());
 

@@ -12,11 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Controllers.Activities.ArticleSearchActivity"
-            android:parentActivityName=".Controllers.Activities.SearchResultActivity" />
-        <activity
-            android:name=".Controllers.Activities.ArticleActivity"
-            android:parentActivityName=".Controllers.Activities.MainActivity" />
+            android:name=".Controllers.Activities.ArticleActivity" />
         <activity
             android:name=".Controllers.Activities.MainActivity"
             android:label="My News"

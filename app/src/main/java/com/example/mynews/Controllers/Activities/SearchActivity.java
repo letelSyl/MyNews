@@ -150,32 +150,26 @@ public class SearchActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.search_art_checkBox:
                 if (checked)
-                    //categs.add("art");
                     categList = categList + "\"art\" ";
                 break;
             case R.id.search_politics_checkBox:
                 if (checked)
-                    //categs.add("politics");
                     categList = categList + "\"politics\" ";
                 break;
             case R.id.search_business_checkBox:
                 if (checked)
-                   // categs.add("business");
                     categList = categList + "\"business\" ";
                 break;
             case R.id.search_sport_checkBox:
                 if (checked)
-                    //categs.add("sport");
                     categList = categList + "\"sport\" ";
                 break;
             case R.id.search_entrepreneur_checkBox:
                 if (checked)
-                   // categs.add("entrepreneur");
                     categList = categList + "\"entrepreneur\" ";
                 break;
             case R.id.search_travel_checkBox:
                 if (checked)
-                    //categs.add("travel");
                     categList = categList + "\"travel\"";
                 break;
         }
