@@ -3,7 +3,6 @@ package com.example.mynews.Controllers.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.mynews.Adapters.SearchAdapter;
 import com.example.mynews.Models.Search.Doc;
@@ -37,11 +36,7 @@ public class SearchResultActivity extends AppCompatActivity {
     @Bind(R.id.fragment_page_recycler_view) RecyclerView recyclerView;
 
 
-    String queryTerm = "";
-    String startDate = "";
-    String endDate = "";
-    String categList = "";
-    String apiKey = "56kl6ofJWQLLxl1hUvA7vWWLJGTC2z5p";
+    private static final String API_KEY = "56kl6ofJWQLLxl1hUvA7vWWLJGTC2z5p";
 
     private Disposable disposable;
 
@@ -68,33 +63,23 @@ public class SearchResultActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-       // if (intent != null){
             if (intent.hasExtra("queryTerm")){
-                queryTerm = intent.getStringExtra("queryTerm");
+                String queryTerm = intent.getStringExtra("queryTerm");
                 map.put("q", queryTerm);
             }
             if (!intent.getStringExtra("startDate").equals("")){
-                startDate = intent.getStringExtra("startDate");
+                String startDate = intent.getStringExtra("startDate");
                 map.put("begin_date", startDate);
             }
             if (!intent.getStringExtra("endDate").equals("")){
-                endDate = intent.getStringExtra("endDate");
+                String endDate = intent.getStringExtra("endDate");
                 map.put("end_date", endDate);
             }
             if (intent.hasExtra("categList")){
-                categList = "news_desk: ("+intent.getStringExtra("categList") + ")";
+                String categList = "news_desk: (" + intent.getStringExtra("categList") + ")";
                 map.put("fq", categList);
             }
-            map.put("api-key", apiKey);
-    //    }
-
-        Toast.makeText(getApplicationContext(),
-                queryTerm  + ", "
-                        + startDate
-                        + endDate
-                        + categList + ", "
-                        + apiKey,
-                Toast.LENGTH_LONG).show();
+            map.put("api-key", API_KEY);
 
         configureTSRecyclerView();
         executeHttpRequestSearch();

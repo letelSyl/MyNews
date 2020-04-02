@@ -33,12 +33,12 @@ public class SearchActivity extends AppCompatActivity {
     @Bind(R.id.tv_date_end) TextView tvDateEnd;
     @Bind(R.id.search_button) Button searchButton;
 
-    String queryTerm ="";
+    private String queryTerm ="";
 
-    String startDate ="";
-    String endDate ="";
+    private String startDate ="";
+    private String endDate ="";
 
-    String categList ="";
+    private String categList ="";
 
 
     @Override
