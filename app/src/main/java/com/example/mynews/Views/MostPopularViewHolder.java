@@ -1,14 +1,11 @@
 package com.example.mynews.Views;
 
-import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.mynews.Models.MostPopular.MPResult;
-import com.example.mynews.Models.TopStories.TSResult;
-import com.example.mynews.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,9 +14,9 @@ import java.util.Date;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import io.reactivex.annotations.Nullable;
 
-import static com.example.mynews.R.*;
+import static com.example.mynews.R.drawable;
+import static com.example.mynews.R.id;
 
 public class MostPopularViewHolder extends RecyclerView.ViewHolder {
     @Bind(id.fragment_page_item_picture) ImageView picture;
@@ -60,13 +57,13 @@ public class MostPopularViewHolder extends RecyclerView.ViewHolder {
 
 
 
-    private static String formatDate(String dateToFormat) {
+    public static String formatDate(String dateToFormat) {
         SimpleDateFormat inFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
         try {
             date = inFormat.parse(dateToFormat);
         } catch (ParseException e) {
-            e.printStackTrace();
+            return "wrong date format!";
         }
         SimpleDateFormat outFormat = new SimpleDateFormat("dd/MM/yy");
 

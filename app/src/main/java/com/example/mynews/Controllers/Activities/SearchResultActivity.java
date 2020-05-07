@@ -125,10 +125,7 @@ public class SearchResultActivity extends AppCompatActivity {
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
 
-        this.disposable = NytStreams.streamFetchSearch(
-                map
-        )
-                .subscribeWith(new DisposableObserver<SearchResult>() {
+        this.disposable = NytStreams.streamFetchSearch(map).subscribeWith(new DisposableObserver<SearchResult>() {
 
 
 

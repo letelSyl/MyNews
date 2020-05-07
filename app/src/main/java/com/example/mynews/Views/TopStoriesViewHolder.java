@@ -1,13 +1,10 @@
 package com.example.mynews.Views;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.mynews.Controllers.Activities.ArticleActivity;
 import com.example.mynews.Models.TopStories.TSResult;
 import com.example.mynews.R;
 
@@ -60,13 +57,13 @@ public class TopStoriesViewHolder extends RecyclerView.ViewHolder {
 
 
 
-    private static String formatDate(String dateToFormat) {
+    public static String formatDate(String dateToFormat) {
         SimpleDateFormat inFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss-SS:SS");
         Date date = null;
         try {
             date = inFormat.parse(dateToFormat);
         } catch (ParseException e) {
-            e.printStackTrace();
+            return "wrong date format!";
         }
         SimpleDateFormat outFormat = new SimpleDateFormat("dd/MM/yy");
 

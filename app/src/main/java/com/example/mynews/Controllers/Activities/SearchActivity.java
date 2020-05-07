@@ -148,43 +148,47 @@ public class SearchActivity extends AppCompatActivity {
 
         // Check which checkbox was clicked
         switch(view.getId()) {
-            case R.id.search_art_checkBox:
+            case R.id.art_checkBox:
                 if (checked)
                     categList = categList + "\"art\" ";
                 break;
-            case R.id.search_politics_checkBox:
+            case R.id.politics_checkBox:
                 if (checked)
                     categList = categList + "\"politics\" ";
                 break;
-            case R.id.search_business_checkBox:
+            case R.id.business_checkBox:
                 if (checked)
                     categList = categList + "\"business\" ";
                 break;
-            case R.id.search_sport_checkBox:
+            case R.id.sport_checkBox:
                 if (checked)
                     categList = categList + "\"sport\" ";
                 break;
-            case R.id.search_entrepreneur_checkBox:
+            case R.id.entrepreneur_checkBox:
                 if (checked)
                     categList = categList + "\"entrepreneur\" ";
                 break;
-            case R.id.search_travel_checkBox:
+            case R.id.travel_checkBox:
                 if (checked)
                     categList = categList + "\"travel\"";
                 break;
         }
     }
-    private static String formatDate(String dateToFormat) {
+    public static String formatDate(String dateToFormat) {
         SimpleDateFormat inFormat = new SimpleDateFormat("dd/MM/yy");
         Date date = null;
+
         try {
             date = inFormat.parse(dateToFormat);
         } catch (ParseException e) {
-            e.printStackTrace();
+            return "wrong date format!";
         }
-        SimpleDateFormat outFormat = new SimpleDateFormat("yyyyMMdd");
 
-        return outFormat.format(date);
+        {
+            SimpleDateFormat outFormat = new SimpleDateFormat("yyyyMMdd");
+
+            return outFormat.format(date);
+        }
     }
 
 

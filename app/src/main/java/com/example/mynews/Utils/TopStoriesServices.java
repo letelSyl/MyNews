@@ -15,6 +15,3 @@ public interface TopStoriesServices {
 
 }
 
-// see query map = search
-// work(er) manager instead alarm manager? = notif
-// travis = integ continu

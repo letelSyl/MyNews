@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+
+    <item android:title="Pages">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/drawer_top_stories"
+                    android:title="Top Stories" />
+                <item
+                    android:id="@+id/drawer_most_popular"
+                    android:title="Most Popular" />
+                <item
+                    android:id="@+id/drawer_Business"
+                    android:title="Business"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="Configration">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/search"
+                    android:icon="@drawable/ic_search"
+                    android:title="Search" />
+
+                <item
+                    android:id="@+id/notifications"
+                    android:icon="@drawable/ic_notifications_black_24dp"
+                    android:title="Notifications"
+
+                    />
+
+                <item
+                    android:id="@+id/help"
+                    android:icon="@drawable/ic_help_black_24dp"
+                    android:title="Help" />
+
+                <item
+                    android:id="@+id/about"
+                    android:icon="@drawable/about"
+                    android:title="About" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

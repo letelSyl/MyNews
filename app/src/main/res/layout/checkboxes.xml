@@ -16,23 +16,23 @@
         android:layout_height="wrap_content">
 
         <CheckBox
-            android:id="@+id/search_art_checkBox"
+            android:id="@+id/art_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/arts"
-            app:layout_constraintBaseline_toBaselineOf="@+id/search_politics_checkBox"
-            app:layout_constraintEnd_toStartOf="@+id/search_politics_checkBox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/politics_checkBox"
+            app:layout_constraintEnd_toStartOf="@+id/politics_checkBox"
             app:layout_constraintStart_toStartOf="parent"
             android:onClick="onCheckboxClicked"/>
 
         <CheckBox
-            android:id="@+id/search_politics_checkBox"
+            android:id="@+id/politics_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/politics"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/search_art_checkBox"
+            app:layout_constraintStart_toEndOf="@+id/art_checkBox"
             tools:layout_conversion_absoluteHeight="136dp"
             android:onClick="onCheckboxClicked"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -43,23 +43,23 @@
         android:layout_height="wrap_content">
 
         <CheckBox
-            android:id="@+id/search_business_checkBox"
+            android:id="@+id/business_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/business"
-            app:layout_constraintBaseline_toBaselineOf="@+id/search_sport_checkBox"
-            app:layout_constraintEnd_toStartOf="@+id/search_sport_checkBox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sport_checkBox"
+            app:layout_constraintEnd_toStartOf="@+id/sport_checkBox"
             app:layout_constraintStart_toStartOf="parent"
             android:onClick="onCheckboxClicked"/>
 
         <CheckBox
-            android:id="@+id/search_sport_checkBox"
+            android:id="@+id/sport_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/sports"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/search_business_checkBox"
+            app:layout_constraintStart_toEndOf="@+id/business_checkBox"
             android:onClick="onCheckboxClicked"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -69,23 +69,23 @@
         android:layout_height="wrap_content">
 
         <CheckBox
-            android:id="@+id/search_entrepreneur_checkBox"
+            android:id="@+id/entrepreneur_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/entrepreneurs"
-            app:layout_constraintBaseline_toBaselineOf="@+id/search_travel_checkBox"
-            app:layout_constraintEnd_toStartOf="@+id/search_travel_checkBox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/travel_checkBox"
+            app:layout_constraintEnd_toStartOf="@+id/travel_checkBox"
             app:layout_constraintStart_toStartOf="parent"
             android:onClick="onCheckboxClicked"/>
 
         <CheckBox
-            android:id="@+id/search_travel_checkBox"
+            android:id="@+id/travel_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/travel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/search_entrepreneur_checkBox"
+            app:layout_constraintStart_toEndOf="@+id/entrepreneur_checkBox"
             android:onClick="onCheckboxClicked"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

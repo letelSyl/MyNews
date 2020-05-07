@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mynews">
 
+
+
+
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,6 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <uses-library android:name="android.test.runner"
+        android:required="false" />
+
         <activity android:name=".Controllers.Activities.ArticleActivity" />
 
         <activity
@@ -34,12 +42,8 @@
             android:parentActivityName=".Controllers.Activities.SearchActivity" />
         <activity
             android:name=".Controllers.Activities.NotificationsActivity"
-            android:label="Notification">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="Notification"
+            android:parentActivityName=".Controllers.Activities.MainActivity"/>
         <activity
             android:name=".Controllers.Activities.HelpActivity"
             android:label="Help"
