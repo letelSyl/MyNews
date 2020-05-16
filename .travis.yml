@@ -1,5 +1,5 @@
 language: android
-jdk: oraclejdk8
+jdk: openJDK 64-Bit Server VM by JetBrains s.r.o 
 sudo: false
 
 android:
