@@ -2,8 +2,13 @@ language: android
 dist: trusty
 android:
   components:
+    - platform-tools
+    - tools
     - build-tools-26.0.2
-    - android-29
+    - android-19
+    - android-29    
+    - sys-img-armeabi-v7a-android-22
+    - extra-android-m2repository
     - extra
   licenses:
     - 'android-sdk-preview-license-52d11cd2'
