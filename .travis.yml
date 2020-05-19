@@ -22,9 +22,6 @@ android:
     - sys-img-armeabi-v7a-google_apis-29
     - android list sdk --extended --no-ui --all
 before_script:
-    # Prepare pre-accepted licenses to not be promted at installation
-    - mkdir -p "$ANDROID_HOME/licenses"
-    - cp ./google-licenses/* "$ANDROID_HOME/licenses/"
     # Launch emulator before the execution
     - echo no | android create avd --force -n test -t android-29 --abi google_apis/armeabi-v7a
     - emulator -avd test -no-audio -no-window &
