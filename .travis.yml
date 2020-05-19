@@ -1,5 +1,5 @@
 language: android
-jdk: Oraclejdk9
+jdk: OpenJDK 8
 dist: trusty
 android:
   components:
