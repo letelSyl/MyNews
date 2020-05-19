@@ -1,31 +1,42 @@
 language: android
-dist: trusty
+sudo: required
+jdk: oraclejdk8
+
+env:
+  global:
+  - ANDROID_API_LEVEL=29
+  - ANDROID_BUILD_TOOLS_VERSION=29.0.3
+  - ANDROID_ABI=armeabi-v7a
+
 android:
- licenses:
-    - 'android-sdk-preview-license-52d11cd2'
-    - android-sdk-license-c81a61d9
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
- components:
+  components:
+    - tools
     - platform-tools
     - tools
-    - build-tools-29.0.2
-    - android-19
-    - android-29    
-    - sys-img-x86-android-29
     - extra-android-m2repository
-    - extra
-    - extra-google-google_play_services
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - addon-google_apis-google-$ANDROID_API_LEVEL
-    - sys-img-armeabi-v7a-google_apis-29
-    - android list sdk --extended --no-ui --all
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+
+before_install:
+  - touch $HOME/.android/repositories.cfg
+  - yes | sdkmanager "platforms;android-29"
+  - yes | sdkmanager "build-tools;29.0.3"
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+  - $HOME/.android/build-cache
+
 before_script:
-    # Launch emulator before the execution
-    - echo no | android create avd --force -n test -t android-29 --abi google_apis/armeabi-v7a
-    - emulator -avd test -no-audio -no-window &
-    - android-wait-for-emulator
-    - adb shell input keyevent 82 &
+  - chmod +x gradlew
+
 script:
-    - ./gradlew build check
+  - ./gradlew clean build
+  - ./gradlew test
