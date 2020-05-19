@@ -1,5 +1,5 @@
 language: android
-sudo: required
+dist: trusty
 jdk: oraclejdk8
 
 env:
@@ -38,4 +38,5 @@ before_script:
   - chmod +x gradlew
 
 script:
-  - ./gradlew
+  - ./gradlew clean build
+  - ./gradlew test
