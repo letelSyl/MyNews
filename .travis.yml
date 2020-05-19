@@ -1,5 +1,5 @@
 language: android
-jdk: OpenJDK 64-bit
+jdk: Oraclejdk9
 dist: trusty
 android:
   components:
