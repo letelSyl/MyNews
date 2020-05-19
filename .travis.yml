@@ -1,6 +1,5 @@
 language: android
 dist: trusty
-jdk: Oraclejdk9
 env:
  global:
     - ANDROID_API_LEVEL=29
