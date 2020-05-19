@@ -1,22 +1,20 @@
 language: android
 dist: trusty
-env:
- global:
-    - ANDROID_API_LEVEL=29
-    - ANDROID_BUILD_TOOLS_VERSION=29.0.2
 android:
  licenses:
-    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-preview-license-52d11cd2'
+    - android-sdk-license-c81a61d9
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
  components:
-    - tools
     - platform-tools
-    # The BuildTools version used by your project
-    - build-tools-$ANDROID_BUILD_TOOLS_VERSION
-    # The SDK version used to compile your project
-    - android-$ANDROID_API_LEVEL
-    # Additional components
+    - tools
+    - build-tools-29.0.2
+    - android-19
+    - android-29    
+    - sys-img-x86-android-29
+    - extra-android-m2repository
+    - extra
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
