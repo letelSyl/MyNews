@@ -3,6 +3,7 @@ package com.example.mynews.Controllers.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.mynews.Adapters.SearchAdapter;
 import com.example.mynews.Models.Search.Doc;
@@ -134,6 +135,11 @@ public class SearchResultActivity extends AppCompatActivity {
                     Log.e("TAG", "On Next");
                 // 1.3 - Update UI with list of topStories
                 updateUIWithSearch(response.getResponse().getDocs());
+                if (response.getResponse().getDocs().isEmpty()){
+                    Toast.makeText(getApplicationContext(),
+                            "No article found !",
+                            Toast.LENGTH_LONG).show();
+                }
 
 
             }
