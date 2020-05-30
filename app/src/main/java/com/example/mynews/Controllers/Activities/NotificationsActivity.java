@@ -90,7 +90,7 @@ public class NotificationsActivity extends AppCompatActivity {
 
 
 
-                        PeriodicWorkRequest workRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 5, TimeUnit.MINUTES).build();
+                        PeriodicWorkRequest workRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 1, TimeUnit.DAYS).build();
 
                         mWorkManager.enqueue(workRequest);
 
