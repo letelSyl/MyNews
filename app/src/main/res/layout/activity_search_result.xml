@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/search_result_toolbar"
+        android:paddingBottom="52dp"
         tools:listitem="@layout/fragment_page_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

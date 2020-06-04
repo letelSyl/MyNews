@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.mynews.Models.MostPopular.MPResult;
+import com.example.mynews.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-import static com.example.mynews.R.drawable;
 import static com.example.mynews.R.id;
 
 public class MostPopularViewHolder extends RecyclerView.ViewHolder {
@@ -38,14 +38,14 @@ public class MostPopularViewHolder extends RecyclerView.ViewHolder {
 
     public void updateWithMostPopular(MPResult result) {
 
-        if (result.getMedia() !=  null) {
+        if (result.getMedia() != null && result.getMedia().size() != 0) {
             this.url = result.getMedia().get(0).getMediaMetadata().get(0).getUrl();
 
 
                 Glide.with(itemView.getContext()).load(url).centerCrop().override(200, 200).into(picture);
 
             }else{
-                Glide.with(itemView.getContext()).load(drawable.ic_broken_image_black_24dp).into(picture);
+            Glide.with(itemView.getContext()).load(R.drawable.ic_broken_image_black_24dp).into(picture);
             }
         this.mSection = result.getSection();
         this.section.setText(mSection);

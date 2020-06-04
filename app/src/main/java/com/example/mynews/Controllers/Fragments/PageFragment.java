@@ -152,7 +152,7 @@ public class PageFragment extends Fragment {
     private void executeHttpRequestTopStories() {
 
 
-       // logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
 
         this.disposable = NytStreams.streamFetchTopstories()
@@ -180,6 +180,9 @@ public class PageFragment extends Fragment {
     }
 
     private void executeHttpRequestBusiness() {
+
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
         this.disposable = NytStreams.streamFetchBusiness()
                 .subscribeWith(new DisposableObserver<TopStories>() {
 
@@ -204,6 +207,9 @@ public class PageFragment extends Fragment {
     }
 
     private void executeHttpRequestMostPopular() {
+
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
         this.disposable = NytStreams.streamFetchMostPopular().subscribeWith(new DisposableObserver<MostPopular>() {
 
 

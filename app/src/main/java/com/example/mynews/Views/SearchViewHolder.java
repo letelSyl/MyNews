@@ -34,8 +34,8 @@ public class SearchViewHolder extends RecyclerView.ViewHolder {
 
     public void updateWithSearch(Doc doc) {
 
-        if (doc.getMultimedia()!= null) {
-            this.url = "https://static01.nyt.com/"+doc.getMultimedia().get(0).getUrl();
+        if (doc.getMultimedia()!= null && doc.getMultimedia().size() != 0) {
+            this.url = doc.getMultimedia().get(0).getUrl();
 
             Glide.with(itemView.getContext()).load(url).centerCrop().override(250, 250).into(picture);
         }else {

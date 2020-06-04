@@ -36,7 +36,7 @@ public class TopStoriesViewHolder extends RecyclerView.ViewHolder {
     public void updateWithTopStories(TSResult result) {
 
 
-        if (result.getMultimedia() != null){
+        if (result.getMultimedia() != null && result.getMultimedia().size() != 0){
             this.picUrl = result.getMultimedia().get(0).getUrl();
 
             Glide.with(itemView.getContext()).load(picUrl).centerCrop().override(250, 250).into(picture);
