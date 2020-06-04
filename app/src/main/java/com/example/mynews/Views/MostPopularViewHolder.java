@@ -38,7 +38,7 @@ public class MostPopularViewHolder extends RecyclerView.ViewHolder {
 
     public void updateWithMostPopular(MPResult result) {
 
-        if (result.getMedia().size() != 0) {
+        if (result.getMedia() !=  null) {
             this.url = result.getMedia().get(0).getMediaMetadata().get(0).getUrl();
 
 

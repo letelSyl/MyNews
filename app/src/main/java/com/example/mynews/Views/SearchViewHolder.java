@@ -6,10 +6,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.mynews.Models.Search.Doc;
-
 import com.example.mynews.R;
 
-import java.lang.annotation.Target;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,7 +34,7 @@ public class SearchViewHolder extends RecyclerView.ViewHolder {
 
     public void updateWithSearch(Doc doc) {
 
-        if (doc.getMultimedia().size() !=0) {
+        if (doc.getMultimedia()!= null) {
             this.url = "https://static01.nyt.com/"+doc.getMultimedia().get(0).getUrl();
 
             Glide.with(itemView.getContext()).load(url).centerCrop().override(250, 250).into(picture);
